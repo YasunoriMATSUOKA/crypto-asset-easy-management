@@ -1,0 +1,9 @@
+.vscode
+.vscode/*
+__pycache__
+# config.xlsx
+# *config.xlsx*
+# data.xlsx
+# *data.xlsx*
+log.log
+*log.log*
