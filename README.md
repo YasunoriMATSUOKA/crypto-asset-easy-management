@@ -21,7 +21,7 @@ Python と Excel を用いて取引所上の暗号資産の管理を簡易的に
 公開鍵認証の方
 
 ```sh
-git@github.com:YasunoriMATSUOKA/crypto-asset-easy-management.git
+git clone git@github.com:YasunoriMATSUOKA/crypto-asset-easy-management.git
 ```
 
 GitHub CLI の方
@@ -43,6 +43,20 @@ git clone https://github.com/YasunoriMATSUOKA/crypto-asset-easy-management.git
 ```sh
 cd crypto-asset-easy-management
 ```
+
+### 設定ファイルとデータファイルを git の追跡対象から除く
+
+最終的に認証情報を書き込むことになる config.xlsx や履歴を蓄積していく data.xlsx については、初回のレポジトリクローンでひな型ファイルを手元に入手した後、以下コマンドを実行して git の追跡対象から明示的に除いておいたほうが良いでしょう。
+
+```sh
+git rm --cached config.xlsx
+```
+
+```sh
+git rm --cached data.xlsx
+```
+
+上記コマンドで、ファイルはローカルに残りますが、Git の追跡対象から外れると思います。
 
 ### Python のインストール
 
