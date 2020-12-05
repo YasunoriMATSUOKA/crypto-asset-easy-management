@@ -44,18 +44,6 @@ git clone https://github.com/YasunoriMATSUOKA/crypto-asset-easy-management.git
 cd crypto-asset-easy-management
 ```
 
-### 設定ファイルとデータファイルを git の追跡対象から除く
-
-最終的に認証情報を書き込むことになる config.xlsx や履歴を蓄積していく data.xlsx については、初回のレポジトリクローンでひな型ファイルを手元に入手した後、以下コマンドを実行して git の追跡対象から明示的に除いてローカルにコミットしておいたほうが良いでしょう。
-
-```sh
-git rm --cached config.xlsx
-```
-
-```sh
-git rm --cached data.xlsx
-```
-
 ### Python のインストール
 
 各自の環境に合わせて 3.x 系列のバージョンをインストールしてください。ここの手順の詳細説明は省略します。
