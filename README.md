@@ -46,7 +46,7 @@ cd crypto-asset-easy-management
 
 ### 設定ファイルとデータファイルを git の追跡対象から除く
 
-最終的に認証情報を書き込むことになる config.xlsx や履歴を蓄積していく data.xlsx については、初回のレポジトリクローンでひな型ファイルを手元に入手した後、以下コマンドを実行して git の追跡対象から明示的に除いておいたほうが良いでしょう。
+最終的に認証情報を書き込むことになる config.xlsx や履歴を蓄積していく data.xlsx については、初回のレポジトリクローンでひな型ファイルを手元に入手した後、以下コマンドを実行して git の追跡対象から明示的に除いてローカルにコミットしておいたほうが良いでしょう。
 
 ```sh
 git rm --cached config.xlsx
@@ -55,8 +55,6 @@ git rm --cached config.xlsx
 ```sh
 git rm --cached data.xlsx
 ```
-
-上記コマンドで、ファイルはローカルに残りますが、Git の追跡対象から外れると思います。
 
 ### Python のインストール
 
@@ -120,6 +118,11 @@ pip install xlwt
 ```sh
 pip install openpyxl
 ```
+
+## 設定ファイル、取引記録ファイルのテンプレートファイルをコピーしてリネーム
+
+実際に使用する設定ファイルは、Git の追跡対象から除外するために、`config_template.xlsx`をコピーして`config.xlsx`にリネームして、`config.xlsx`ファイルの方を使用してください。
+また、実際に使用する取引記録ファイルについても、同様に Git の追跡対象から除外するために、`data_template.xlsx`をコピーして`data.xlsx`にリネームして、`data.xlsx`ファイルの方を使用してください。
 
 ## 設定ファイルへ定期自動買い付けの設定を記入
 
