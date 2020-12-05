@@ -119,6 +119,11 @@ pip install xlwt
 pip install openpyxl
 ```
 
+## 設定ファイル、取引記録ファイルのテンプレートファイルをコピーしてリネーム
+
+実際に使用する設定ファイルは、Git の追跡対象から除外するために、`config_template.xlsx`をコピーして`config.xlsx`にリネームして、`config.xlsx`ファイルの方を使用してください。
+また、実際に使用する取引記録ファイルについても、同様に Git の追跡対象から除外するために、`data_template.xlsx`をコピーして`data.xlsx`にリネームして、`data.xlsx`ファイルの方を使用してください。
+
 ## 設定ファイルへ定期自動買い付けの設定を記入
 
 設定ファイルは、エクセルファイルの`config.xlsx`です。
